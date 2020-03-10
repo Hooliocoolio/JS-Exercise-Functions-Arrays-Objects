@@ -52,50 +52,56 @@ function sayGoodbye(name) {
  * Hint 1: The formula for converting celsius to fahrenheit is t*9/5 + 32 where t is the temperature in celsius.
  * Hint 2: There is a very easy way to round numbers in JS. Do a google search to find out how. 
  */
-function temperatureCtoF( /* code here */ ) {
-  /* code here */
+function temperatureCtoF(tempC) {
+  var tempF = tempC;
+   return(Math.round(tempC * 9 / 5 + 32));
 }
 
 /**
  * ### Challenge `temperatureInF`
- * 
- * @instructions
- * This function should take an a temperature and a unit (either 'F' or 'C') as arguments,
- * and return the temperature in fahrenheit, rounded to the nearest whole number. 
- * 
- * For example, if we invoke `temperatureInF`
- * passing 88, 'F' as the arguments,
- * the returned value should be: '88F'
- * 
- * If we invoke `temperatureInF`
- * passing 24, 'C' as the arguments,
- * the returned value should be: '75F'
- * 
- * Hint: You can call your `temperatureCtoF` function from inside `temperatureInF`.
+ * @instructions This function should take an a temperature and a unit (either 'F' or 'C') as arguments,
+and return the temperature in fahrenheit, rounded to the nearest whole number.
+For example, if we invoke `temperatureInF`
+passing 88, 'F' as the arguments,
+the returned value should be: '88F'
+If we invoke `temperatureInF`
+passing 24, 'C' as the arguments,
+the returned value should be: '75F'
+Hint: You can call your `temperatureCtoF` function from inside `temperatureInF`.
+ * @param {number} tempC
+ * @param {string} unit
  */
-function temperatureInF( /* code here */ ) {
+function temperatureInF(tempC, unit) {
+  let C = unit;
+  return (temperatureCtoF(tempC + unit)) ;
   /* code here */
 }
 
 
 /**
  * ### Challenge `makePersonObject`
- * 
- * @instructions
- * This function should take an id, a name and an email as arguments,
+ * instructions This function should take an id, a name and an email as arguments,
  * and return an object with `id`, `name` and `email` properties.
- * 
+ *
  * For example, if we invoke `makePersonObject`
- * passing 5, 'Leia' and 'leia@leia.com' as arguments,
+ * passing 5, 'Leia' and 'leia
+ * leia .com' as arguments,
  * the returned value should look like:
  * {
- *   id: 5,
- *   name: "Leia",
- *   email: "leia@leia.com",
+ * id: 5,
+ * name: "Leia",
+ * email: "leia
+ * leia .com",
  * }
+ * 
  */
-function makePersonObject( /* code here */ ) {
-  /* code here */
+function makePersonObject(id, name, email) {
+  const person = {
+    id: id,
+    name: name,
+    email: email,
+  }
+  return person;
 }
 
 /**
