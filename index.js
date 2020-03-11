@@ -93,7 +93,9 @@ function temperatureInF(tempC, unit) {
  * email: "leia
  * leia .com",
  * }
- * 
+ * @param {any} id
+ * @param {any} name
+ * @param {any} email
  */
 function makePersonObject(id, name, email) {
   const person = {
@@ -104,23 +106,31 @@ function makePersonObject(id, name, email) {
   return person;
 }
 
+
 /**
  * ### Challenge `getName`
- * 
- * @instructions
- * This function takes as its only argument
+ * instructions This function takes as its only argument
  * an object containing a `name` property,
  * and return a string that reads `Hello, my name is {name}`,
  * where `{name}` is the name stored in the object.
- * 
+ *
  * For example, if we invoke `getName`
- * passing { id: 1, name: 'Leia', email: 'leia@leia.com` } as the argument,
+ * passing { id: 1, name: 'Leia', email: 'leia
+ * leia .com` } as the argument,
  * the returned value should look like `Hello, my name is Leia`.
+ * 
+ * @param {any} name
  */
-function getName( /* code here */ ) {
-  /* code here */
-}
+function getName(id,name,email) {
+  const myName = {
+    id: id, 
+    name: "Luke",
+    email: email,
+  }
 
+   return "Hello, my name is " +myName.name+ ".";
+
+}
 
 /**
  * ### Challenge `appleIndex`
@@ -137,8 +147,11 @@ function getName( /* code here */ ) {
  * passing in [ 'orange', 'grape', 'apple', 'banana', 'mango' ] as the argument,
  * the returned value should be: 2.
  */
-function appleIndex( /* code here */ ) {
-  /* code here */
+function appleIndex(arr) {
+  var fruits = ['orange', 'apple', 'banana'];
+  
+  return fruits.indexOf('apple');
+  
 }
 
 /**
